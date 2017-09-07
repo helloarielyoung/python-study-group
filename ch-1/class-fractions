@@ -1,0 +1,58 @@
+class Fraction:
+     def __init__(self,top,bottom):
+         common = gcd(top, bottom)
+         self.num = top//common
+         self.den = bottom//common
+
+     def __str__(self):
+         return str(self.num)+"/"+str(self.den)
+
+     def show(self):
+         print(self.num,"/",self.den)
+
+     def __add__(self,otherfraction):
+         newnum = self.num*otherfraction.den + \
+                      self.den*otherfraction.num
+         newden = self.den * otherfraction.den
+         return Fraction(newnum/newden)
+
+     def __eq__(self, other):
+         firstnum = self.num * other.den
+         secondnum = other.num * self.den
+
+         return firstnum == secondnum
+
+     def getNum(self):
+         return self.num
+    
+     def getDen(self):
+         return sefl.den
+    
+     #My code begins here
+     def __sub__(self,otherfraction):
+         """Make sure the denominators are the same.
+         Find LCD
+         1) if dens ==, go right to subtraction
+         2) Else small_den = smaller denominator
+         3) While loop that stops when LCD gets populated
+             If big_den is evenly divisble by small_den then LCD = big_den
+                 and multiply small_den and small_den's numerator by whatever
+                 it takes for den to = big_den
+             Else trial_den = small_den + small_den
+             If big_den is evenly divisible by trial_Den then LCD = trial_den
+             ELSE trial_den = trial_den + small_den
+             
+         
+         Multiply top and bottom
+         Subtract the numerators).
+         Put the answer over the same denominator.
+         Simplify the fraction (if needed)."""
+         #add code
+         #newnum = self.num*otherfraction.den + \
+         #             self.den*otherfraction.num
+         #newden = self.den * otherfraction.den
+         #Check if dens are the same
+         #if self.den == otherfraction.den:
+        
+         #return Fraction(newnum/newden)
+         pass
